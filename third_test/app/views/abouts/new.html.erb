@@ -1,0 +1,10 @@
+<h1>fill your about details</h1>
+
+<%= form_for @about, url:abouts_path  do |f| %>
+  name: <%= f.text_field :name %><br/>
+  email : <%= f.email_field :email %><br/>
+  address: <%= f.text_field :address %><br/>
+  description: <%= f.text_field :description%>
+  <%=f.hidden_field :user_id, value: current_user.id%>
+  <%= f.submit %>
+<% end %>

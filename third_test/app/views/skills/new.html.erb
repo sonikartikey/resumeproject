@@ -1,0 +1,7 @@
+<h1>fill your skills</h1>
+
+<%= form_for @skill, url:skills_path  do |f| %>
+  workflow: <%= f.text_field :workflow %><br/>
+  <%=f.hidden_field :user_id, value: current_user.id%>
+  <%= f.submit %>
+<% end %>

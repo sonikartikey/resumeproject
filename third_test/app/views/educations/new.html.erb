@@ -1,0 +1,15 @@
+<h1>fill your educations details</h1>
+
+<%= form_for @education, url:educations_path  do |f| %>
+  university_name: <%= f.text_field :university_name %><br/>
+  stream : <%= f.text_field :stream %><br/>
+   percentage : <%= f.text_field :percentage %><br>
+  description: <%= f.text_field :description%><br>
+  start_date: <%= f.text_field :start_date%><br>
+  end_date: <%= f.text_field :end_date%><br>
+  <%=f.hidden_field :user_id, value: current_user.id%>
+  <%= f.submit %>
+<% end %>
+
+
+
